@@ -8,7 +8,7 @@ public class emf : MonoBehaviour
     public Material green;
     public MeshRenderer mr;
     public ghosthandler gh;
-    private bool IstImRaum = false;
+    public bool IstImRaum = false;
 
     private void Start()
     {
@@ -20,6 +20,8 @@ public class emf : MonoBehaviour
     {
         if(IstImRaum == true)
         {
+            
+
             if(gh.ghosteventactive == true)
             {
                 mr.material = green;

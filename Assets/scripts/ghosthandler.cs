@@ -30,7 +30,7 @@ public class ghosthandler : MonoBehaviour
     {
         activeghost = Random.Range(0, Ghosts);
 
-        Debug.Log(activeghost);
+        
 
         Oni.SetActive(false);
         Shade.SetActive(false);
