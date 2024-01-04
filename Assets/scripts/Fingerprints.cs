@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fingerprints : MonoBehaviour
 {
-    public MeshRenderer mr;
+    public GameObject fingerprint1;
 
     public float fingerprintdurability = 15f;
 
@@ -12,14 +12,14 @@ public class Fingerprints : MonoBehaviour
 
     public void FingerprintsAction()
     {
-        mr.enabled = true;
+        fingerprint1.SetActive(true);
         timer = fingerprintdurability;
 
     }
 
     private void Start()
     {
-        mr.enabled = false;
+        fingerprint1.SetActive(false);
         timer = 0;
     }
 
@@ -29,7 +29,7 @@ public class Fingerprints : MonoBehaviour
 
         if (timer < 0)
         {
-            mr.enabled = false;
+            fingerprint1.SetActive(false);
         }
     }
 }
