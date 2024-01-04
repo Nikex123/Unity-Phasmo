@@ -9,29 +9,33 @@ public class ghosthandler : MonoBehaviour
 {
     public bool ghosteventactive = false;
 
-    public int Ghosts = 3;
+    public int Ghosts = 4;
 
     public GameObject Oni;
     public GameObject Shade;
     public GameObject Obake;
+    public GameObject Myling;
 
     public Fingerprints fp;
 
     public bool Shadeactive = false;
     public bool Oniactive = false;
     public bool Obakeactive = false;
+    public bool Mylingactive = false;
+
 
     public int activeghost = 0;
 
     private void Start()
     {
         activeghost = Random.Range(0, Ghosts);
-        
 
+        Debug.Log(activeghost);
 
         Oni.SetActive(false);
         Shade.SetActive(false);
         Obake.SetActive(false);
+        Myling.SetActive(false);
 
         fp.enabled = false;
     }
@@ -54,6 +58,13 @@ public class ghosthandler : MonoBehaviour
         {
             Obake.SetActive(true);
             Obakeactive = true;
+            fp.enabled = true;
+        }
+
+        if(activeghost == 3)
+        {
+            Myling.SetActive(true);
+            Mylingactive = true;
             fp.enabled = true;
         }
 

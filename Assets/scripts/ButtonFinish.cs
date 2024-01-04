@@ -28,6 +28,25 @@ public class ButtonFinish : MonoBehaviour
         text.text = gs.Money.ToString() + "$";
     }
 
+    public void Myling()
+    {
+
+        ButtonManager?.SetActive(false);
+        if (gs.ghosttype == 3)
+        {
+            gs.Money = gs.Money + 10;
+            gs.MoneySave();
+            gs.MoneyTextSet();
+
+        }
+        else
+        {
+            gs.Money = gs.Money - 5;
+            gs.MoneySave();
+            gs.MoneyTextSet();
+
+        }
+    }
     public void Oni()
     {
         ButtonManager?.SetActive(false);

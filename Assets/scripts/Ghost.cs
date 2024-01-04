@@ -42,6 +42,7 @@ public class Ghost : MonoBehaviour
     public throwable ta;
     public throwable ta2;
     public throwable ta3;
+    public throwable ta4;
 
     public GameObject boysroom;
     public GameObject bathroom;
@@ -267,6 +268,10 @@ public class Ghost : MonoBehaviour
             {
                 fs.FingerprintsAction();
             }
+            if(gh.Mylingactive == true)
+            {
+                fs.FingerprintsAction();
+            }
 
             TimerFinger = Random.Range(fingerprintsmin, fingerprintsmax);
 
@@ -359,5 +364,7 @@ public class Ghost : MonoBehaviour
            ta2.Throw();
            ta3.CurrentThrow = Random.Range(ThrowMin, ThrowMax);
            ta3.Throw();
+           ta4.CurrentThrow = Random.Range(ThrowMin, ThrowMax);
+           ta4.Throw();
     }
 }
